@@ -26,4 +26,104 @@
   }
 }
 
+/* Optimize the layout and display for mobile devices (screens < 768px) */
+@media (max-width: 768px) {
+  /* Navbar optimization for mobile devices */
+  .nav-menu {
+    display: none; /* Hide the regular navbar */
+  }
 
+  /* Display the hamburger menu on mobile devices */
+  .hamburger-menu {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    color: #61dafb;
+  }
+
+  /* Mobile navbar dropdown menu */
+  .menu-expanded {
+    display: flex;
+    flex-direction: column;
+    background-color: #282c34;
+    padding: 10px;
+  }
+
+  .menu-expanded li {
+    margin: 10px 0;
+  }
+
+  .menu-expanded a {
+    color: #61dafb;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+  }
+
+  /* Font size adjustments for mobile */
+  .text-5xl {
+    font-size: 2rem; /* Reduce heading size */
+  }
+
+  .text-3xl {
+    font-size: 1.75rem; /* Reduce subheading size */
+  }
+
+  .text-2xl {
+    font-size: 1.5rem;
+  }
+
+  .text-xl {
+    font-size: 1.25rem;
+  }
+
+  /* Container padding for mobile */
+  .container {
+    padding: 1rem;
+  }
+
+  /* Adjusting the grid layout to be single-column on mobile */
+  .grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Image resizing for mobile */
+  .w-40,
+  .h-40 {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* Section margin adjustments for mobile */
+  .mb-16 {
+    margin-bottom: 1rem;
+  }
+
+  /* Buttons and inputs for mobile */
+  button,
+  input,
+  textarea {
+    font-size: 16px; /* Adjust button/input font size */
+    padding: 10px;
+  }
+
+  /* Adjust spacing in forms */
+  .space-y-6 > * {
+    margin-bottom: 1rem;
+  }
+
+  /* Footer adjustments for mobile */
+  footer {
+    padding: 1rem;
+  }
+
+  /* Adjust avatar for mobile */
+  .avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+}

@@ -54,6 +54,11 @@ const Portfolio = () => {
   const [activeSection, setActiveSection] = useState("home");
   const [formData, setFormData] = useState({ name: "", email: "", whatsapp: "", address: "", message: "" });
   const [formStatus, setFormStatus] = useState(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleToggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -111,7 +116,14 @@ const Portfolio = () => {
   return (
     <div className="bg-gray-900 text-green-100 min-h-screen font-pixel">
       <nav className="fixed top-0 left-0 right-0 bg-gray-800 z-50 shadow-lg">
-        <ul className="flex justify-center space-x-6 p-4">
+        {/* Show hamburger menu only on mobile devices */}
+        <div className="md:hidden p-4">
+          <button className="hamburger-menu" onClick={handleToggleMenu}>
+            ☰
+          </button>
+        </div>
+        {/* Regular navbar for larger screens */}
+        <ul className="hidden md:flex justify-center space-x-6 p-4">
           {["home", "about", "skills", "experience", "education", "contact"].map((section) => (
             <li key={section}>
               <a href={`#${section}`} className={`text-sm uppercase transition-colors duration-300 hover:text-green-400 ${activeSection === section ? "text-green-400 border-b-2 border-green-400" : "text-green-200"}`}>
@@ -120,11 +132,23 @@ const Portfolio = () => {
             </li>
           ))}
         </ul>
+        {/* Mobile menu that expands/collapses on click */}
+        {isMenuOpen && (
+          <ul className="flex flex-col space-y-4 p-4 bg-gray-800 md:hidden">
+            {["home", "about", "skills", "experience", "education", "contact"].map((section) => (
+              <li key={section}>
+                <a href={`#${section}`} className={`text-sm uppercase transition-colors duration-300 hover:text-green-400 ${activeSection === section ? "text-green-400 border-b-2 border-green-400" : "text-green-200"}`}>
+                  {section}
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
       </nav>
 
       <main className="container mx-auto px-4 pt-20">
         <Section id="home" noBackground>
-          <div className="flex flex-col items-center justify-center h-[calc(100vh-80px)]">
+          <div className="flex flex-col items-center justify-center h-[calc(100vh-130px)]">
             <motion.img src="pixel.png" alt="8-bit avatar of M. Ramadhan Adi Putra" className="w-40 h-40 rounded-full mb-6 border-4 border-green-400 shadow-lg" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ duration: 0.5 }} />
 
             <motion.h1 className="text-5xl font-bold mb-4 text-green-400" initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
