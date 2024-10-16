@@ -2,17 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -37,21 +26,4 @@
   }
 }
 
-@keyframes neon-glow {
-  0% {
-    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00, 0 0 20px #00ff00;
-  }
-  100% {
-    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
-  }
-}
 
-.neon-text {
-  animation: neon-glow 1.5s ease-in-out infinite alternate;
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
-
-.pixel-font {
-  font-family: "Press Start 2P", cursive;
-}
