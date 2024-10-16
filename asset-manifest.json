@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/mrap0812/mrap0812.github.io/static/css/main.0ca790da.css",
+    "main.js": "/mrap0812/mrap0812.github.io/static/js/main.26d54662.js",
+    "index.html": "/mrap0812/mrap0812.github.io/index.html",
+    "main.0ca790da.css.map": "/mrap0812/mrap0812.github.io/static/css/main.0ca790da.css.map",
+    "main.26d54662.js.map": "/mrap0812/mrap0812.github.io/static/js/main.26d54662.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0ca790da.css",
+    "static/js/main.26d54662.js"
+  ]
+}
